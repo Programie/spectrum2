@@ -1,10 +1,13 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.0)
 
 project(libtransport)
 
 if(${CMAKE_MAJOR_VERSION} GREATER 2)
 	cmake_policy(SET CMP0037 OLD)
 endif()
+
+cmake_policy(SET CMP0042 NEW)
+SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 include(CPack)
 message(STATUS "Variables to override default places where to find libraries:")
